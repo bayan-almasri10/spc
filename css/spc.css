@@ -1,7 +1,6 @@
 :root{
     --main-color: #1780b8;
     --second-color: #cea010;
-
     --third-color:#777; 
     --section-padding:100px;
     --main-transition:0.3s;
@@ -26,6 +25,9 @@ font-family: 'Open Sans', sans-serif;
 }
 ul{
     list-style: none;
+}
+a{
+    text-decoration: none;
 }
 .container{
     padding-left: 15px;
@@ -123,6 +125,16 @@ header .container::after{
     left: 15px;
     background-color: var(--main-color);
 }
+header .container .logo img{
+    width: 300px;
+    height: 90px;
+}
+@media (min-width:768px){
+    header .container .logo img{
+        width: 200px;
+        height: 70px;
+    }
+}
 header .logo i{
     width: 40px;
     color: blue;
@@ -152,7 +164,7 @@ header nav ul{
     }
     header nav .toggle-menu:hover + ul{
         display: flex;
-        background-color: rgba(0 0 0/ 0.496);
+        /* background-color: rgba(0 0 0/ 0.496); */
         left: 0%;
         flex-direction: column;
         position: absolute;
@@ -246,12 +258,6 @@ header nav .form i{
     font-size:14px ;
     line-height: 2;
 }
-.landing .change-background{
-    position: absolute;
-    color: white;
-    top: 50%;
-    transform: translateY(-50%);
-}
 @media (max-width:767px) {
     .landing  .text .content h1{
         font-size: 22px;
@@ -266,79 +272,20 @@ header nav .form i{
     .landing .change-background{
         display: none;
     }
-    .slideshow-container .mySlides img {
-        display: none;
-    }
 }
-    .overlay .slideshow-container {
-    width: 100%;
-    position: relative;
-    margin: auto;
-}
-
-.prev, .next {
-    cursor: pointer;
+.landing .go-down{
     position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
+    color: var(--main-color);
+    bottom: 25PX;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: var(--main-transition);
 }
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
+.landing .go-down:hover{
+    color: var(--main-color-alt);
 }
-.prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
-}
-.mySlides  .text {
-    color: #f2f2f2;
-    font-size: 15px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
-    width: 100%;
-    text-align: center;
-}
-.dot {
-    cursor: pointer;
-    margin-top: 8rem;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: 0.6s ease;
-    z-index: 5;
-}
-.active-dot, .dot:hover {
-    background-color: var(--main-color);    
-}
-.fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-@media (max-width:767px) {
-    .mySlides  {
-        margin-top: 5rem;
-    }
-    .prev, .next {
-        display: none;
-    }
-    .dot{
-        display: none;
-    }
-}
-@keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
+.landing .go-down i {
+    animation: bouncing 1.5s infinite;
 }
 /* end landing */
 /*start about*/
@@ -508,6 +455,7 @@ header nav .form i{
 }
 .corses .box .content h1{
     font-size: 25px;
+    color: var(--main-color);
     margin: 0;
 }
 .corses .box .content p{
@@ -525,10 +473,13 @@ header nav .form i{
 }
 .corses .box .info a{
     font-weight: bold;
-    color: var(--main-color);
+    color: var(--second-color);
+    text-decoration: none;
 }
 .corses .box .info i{
-    color: var(--main-color);
+    color: var(--second-color);
+    /* color: var(--main-color); */
+
 }
 .corses .box:hover .info i{
     animation: moving-arrow 0.6s linear infinite;
@@ -550,9 +501,9 @@ header nav .form i{
 .testimonials .box{
     position: relative;
     padding: 20px;
-    background-color: white;
+    background-color: #1780b80d;
     border-radius: 10px;
-    box-shadow: 0px 2px 4px rgb(0 0 0 / 7%);
+    box-shadow: 0px 2px 4px #1780b88c;
 }
 .testimonials .box img{
     position: absolute;
@@ -561,7 +512,7 @@ header nav .form i{
     border-radius: 50%;
     top: -20px;
     right: -20px;
-    border: 7px solid var(--section-background);
+    border: 7px solid white;
 }
 .testimonials .box h3{
     margin: 0 0 10px;
@@ -587,7 +538,7 @@ header nav .form i{
 .quote{
     padding-top: var(--section-padding);
     padding-bottom: var(--section-padding); 
-    background-color: #333;
+    background-color:  #1780b88c;
     background-size: cover;
     position: relative;
     text-align: center;
@@ -723,25 +674,16 @@ q::before{
     margin-right: 10px;
 }
 .footer .box .social li a{
-    background-color:#313131 ;
-    color:#777;
+    color:black;
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 50px;
-    height: 50px;
-    font-size: 20px;
+    padding-right: 10px;
+    font-size: 40px;
     transition: var(--main-transition);
 }
-
-.footer .box .social .facebook:hover{
-    background-color: #1877f2;
-}
-.footer .box .social .twitter:hover{
-    background-color: #1DA1F2;
-}
-.footer .box .social .linkedin:hover{
-    background-color: #0a66c2;
+.footer .box a{
+    color: #B9B9B9;
 }
 .footer .box .text{
     line-height: 2;
@@ -773,13 +715,7 @@ q::before{
     color:#B9B9B9 ;
     transition: var(--main-transition);
 }
-.footer .box .links li a::before{
-    font-family: "Font Awesome 5 Free";
-    content: "\f101";
-    font-weight: 900;
-    margin-right: 10px;
-    color: var(--main-color);
-}
+/* */
 .footer .box .links li:hover a{
     color:white ; 
 }
@@ -791,7 +727,7 @@ q::before{
 }
 .footer .box .line i{
     font-size: 25px;
-    color: var(--main-color);
+    color: black;
     margin-right: 15px;
 }
 @media (max-width:767px){
@@ -818,11 +754,20 @@ q::before{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 30px 0;
+    padding: 10px 0;
     border-top: 1px solid  #444;
 }
 .footer .copyright i{
-    color: var(--main-color);
+    color: purple;
     padding: 0 5px;
 }
 /* end footer */
+
+@keyframes bouncing{
+    0%,10%,20%,30%,50%,80%,100%{
+        transform: translateY(0);
+    }
+    40%,60%{
+        transform: translateY(-15px);
+    }
+}
