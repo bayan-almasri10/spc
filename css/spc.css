@@ -4,7 +4,7 @@
     --third-color:#777; 
     --section-padding:100px;
     --main-transition:0.3s;
-    --main-padding-top:200px;
+    --main-padding-top:100px;
     --main-padding-bottom:100px;
 }
 /* -------- */
@@ -144,7 +144,6 @@ header nav{
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    
 }
 header nav .toggle-menu{
     color: var(--main-color);
@@ -191,13 +190,6 @@ header nav ul li a:hover{
     color: var(--second-color);
     border-bottom: 2px solid  var(--second-color);
 }
-header nav .form{
-    width: 40px;
-    height: 30px;
-    position: relative;
-    margin-left: 30px;
-    border-left: 1px solid var(--main-color);
-}
 header nav .form i{
     color:var(--main-color);
     font-size: 20px;
@@ -206,12 +198,10 @@ header nav .form i{
     transform: translateY(-50%);
     right: 0;
 }
-
 @media (max-width:768px){
     header nav .form{
         display: none;
     }
-
 }
 /* end header */
 /* start landing */
@@ -220,7 +210,6 @@ header nav .form i{
     min-height: 100vh;
     background-size: cover;
 }
-
 .landing  .text{
     position: absolute;
     top: 50%;
@@ -391,10 +380,15 @@ header nav .form i{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
     gap: 30px;
+    margin-bottom: 20px;
 }
+/* .services .section{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+    gap: 30px;
+    margin-bottom: 20px;
+} */
 .services .box{
-    /* background-color: white; */
-    /* background-image: url(/imgs/Language.jfif); */
     box-shadow: 0px 12px 20px 0px rgb(0 0 0 / 13%), 0px 2px 4px 0px rgb(0 0 0 / 12%);
     counter-increment: services;
     transition: var(--main-transition);
@@ -462,7 +456,13 @@ header nav .form i{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
     gap: 30px;
+    
 }
+/* .corses .section{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+    gap: 30px;
+} */
 .corses .box{
     box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
     background-color: #ce9f100e;
@@ -526,11 +526,14 @@ header nav .form i{
     background-color:var(--section-background);
     position: relative;
 }
+
 .testimonials .container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
     gap: 30px;
+    margin-bottom: 20px;
 }
+
 .testimonials .box{
     position: relative;
     padding: 20px;
@@ -557,6 +560,7 @@ header nav .form i{
 .testimonials .box h3{
     margin: 0 0 10px;
     color:var(--main-color) ;
+    font-size: 25px;
 }
 @media (max-width:767px){
     .testimonials .box h3{
@@ -624,12 +628,117 @@ q::before{
 }
 /* end quote */
 
-/* start contact */
+/* start achievements */
+.achievements{
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+    background-color: var(--section-background);
+    position: relative;
+}
+.achievements .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(1fr));
+    gap: 30px;
+}
+.achievements .box {
+    display: inline-flex;
+    /* grid-template-columns: repeat(auto-fill, minmax(350px,1fr)); */
+    gap: 40px;
+    padding: 15px;
+    background-color: white;
+    box-shadow: 0px 12px 20px 0px rgb(0 0 0 / 13%), 0px 2px 4px 0px rgb(0 0 0 / 12%);
+    margin-bottom: 40px;
+}
+@media (max-width:767px){
+    .achievements .box{
+        display: flex;
+        flex-direction: column;
+    }
+}
+.achievements .box .text-con{
+    padding: 20px 20px 10px 20px;
+}
+.achievements .box h3{
+    color: var(--main-color);
+    /* font-size: 25px; */
+}
+.achievements .box .text-con p{
+    margin: 30px;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: -0.5;
+    line-height: 1.7;
+}
+@media (max-width:767px){
+    .achievements .box .text-con p{
+        margin:15px;
+        font-size: 18px;
+    }
+}
+.achievements .box .image{
+    position: relative;
+    overflow: hidden;
+}
+.achievements .box .image::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.264);
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+    z-index: 2;
+}
+.achievements .box .image:hover::before{
+    animation: flashing 0.7s;
+}
+.achievements .box img{
+    max-width: 100%;
+    transition: var(--main-transition);
+}
+.button{
+    display: block;
+    margin: 0 auto ;
+    margin-top: 40px;
+    width: fit-content;
+    color: white;
+    background-color: var(--second-color);
+    font-size: 20px;
+    text-align: center;
+    padding:  20px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0px 3px 5px #5d62648c;
+    transition: all 0.2s ease;
+    border: none;
+}
+/* .hide{
+    display: none;
+} */
+.button:active{
+    transform: scale(0.96);
+}
+ /* end achievements */
 
+ /* start teachers */
+.teachers{
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding); 
+}
+.teachers .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+    gap: 40px;
+    margin-bottom: 20px;
+}
+ /* end teachers */
+
+/* start contact */
 .contact{
     padding-top: var(--section-padding);
     padding-bottom: var(--section-padding); 
-    
 }
 .contact .content{
     display: flex;
@@ -643,7 +752,6 @@ q::before{
 }
 .contact .content form{
     flex-basis: 70%;
-    
 }
 .contact .content form .main-input{
     padding:  20px;
@@ -715,7 +823,7 @@ q::before{
     /* start footer */
 .footer{
     background-color: var(--main-color);
-    padding: 70px 0 0 ;
+    padding: 40px 0 0 ;
 }
 .footer .container{
     display: grid;
@@ -724,7 +832,7 @@ q::before{
 }
 .footer .box h3{
     color: white;
-    font-size: 50px;
+    font-size: 40px;
     margin: 0 0 20px;
 }
 @media (max-width:767px) {
@@ -749,7 +857,7 @@ q::before{
     justify-content: center;
     align-items: center;
     padding-right: 10px;
-    font-size: 40px;
+    font-size: 30px;
     transition: var(--main-transition);
 }
 .footer .box a{
@@ -796,7 +904,7 @@ q::before{
     color: #B9B9B9;
 }
 .footer .box .line i{
-    font-size: 25px;
+    font-size: 20px;
     color: black;
     margin-right: 15px;
 }
