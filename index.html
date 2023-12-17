@@ -100,7 +100,9 @@
                 </div>
             </div>
         </div>
-        <div class="section container">
+        <!-- <input  type="checkbox" id="toggleCheckbox" style="display: none;"> -->
+        <div id="section2">
+            <!-- id="elementToToggle1" -->
             <div class="box">
                 <img src="./imgs/Language.jfif" alt="">
                 <h3>Univercity  Courses</h3>
@@ -123,7 +125,8 @@
                 </div>
             </div>
         </div>
-        <button  onclick="showHideElements('.section1')" class="button">More</button>
+        <!--  id="toggleButton" -->
+        <button onclick="toggleElement('section2')" class="button">More</button>
     </div>
     <!-- end Services -->
 
@@ -180,7 +183,7 @@
             </div>
             
         </div>
-        <div class="section container">
+        <div id="section1">
             <div class="box">
                 <img src="./imgs/cat-01.jpg">
                 <div class="content">
@@ -226,9 +229,126 @@
                 </div>
             </div>
         </div>
-        <button  onclick="showHideElements('.section2')" class="button">More</button>
+        <button  onclick="toggleElement('section1')" class="button">More</button>
     </div>
     <!-- end corses -->
+
+    <!-- start achievements -->
+    <div class="achievements" id="achievements">
+        <div class="main-heading">
+            <h2 >Achievements</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus, est? </p>
+        </div>
+        <div class="container">
+            <div class="box">
+                <div class="image">
+                    <img src="./imgs/gallery-01.png">
+                </div>
+                <div class="text-con">
+                    <h3>title 1</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, deleniti dignissimos laudantium cumque nihil quia ipsum dolore fugiat! Doloribus, quam? Obcaecati voluptatum accusantium voluptate</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="./imgs/gallery-01.png">
+                </div>
+                <div class="text-con">
+                    <h3>title 1</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, deleniti dignissimos laudantium cumque nihil quia ipsum dolore fugiat! Doloribus, quam? Obcaecati voluptatum accusantium voluptate</p>
+                </div>
+            </div>
+            <div id="section3">
+                <div class="box">
+                    <div class="image">
+                        <img src="./imgs/gallery-01.png">
+                    </div>
+                    <div class="text-con">
+                        <h3>title 1</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, deleniti dignissimos laudantium cumque nihil quia ipsum dolore fugiat! Doloribus, quam? Obcaecati voluptatum accusantium voluptate</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="image">
+                        <img src="./imgs/gallery-01.png">
+                    </div>
+                    <div class="text-con">
+                        <h3>title 1</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, deleniti dignissimos laudantium cumque nihil quia ipsum dolore fugiat! Doloribus, quam? Obcaecati voluptatum accusantium voluptate</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="image">
+                        <img src="./imgs/gallery-01.png">
+                    </div>
+                    <div class="text-con">
+                        <h3>title 1</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, deleniti dignissimos laudantium cumque nihil quia ipsum dolore fugiat! Doloribus, quam? Obcaecati voluptatum accusantium voluptate</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="image">
+                        <img src="./imgs/gallery-01.png">
+                    </div>
+                    <div class="text-con">
+                        <h3>title 1</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, deleniti dignissimos laudantium cumque nihil quia ipsum dolore fugiat! Doloribus, quam? Obcaecati voluptatum accusantium voluptate</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button  onclick="toggleElement('section3')" class="button">More</button>
+    </div>
+    <!-- end achevments -->
+
+    <!--start quote-->
+    <div class="quote" id="quote">
+        <div class="container">
+            <q>"The elevator to success is out of order. You'll have to use the stairs, one step at a time".</q>
+            <span>john doe</span>
+        </div>
+    </div>
+    <!--end quote-->
+
+    <!--start our teachers -->
+    <div class="teachers" id="teachers">
+        <div class="main-heading">
+            <h2 >OUR TEACHERS</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus, est? </p>
+        </div>
+        <div class="container">
+                <div class="card" style="width: 14rem;">
+                    <img src="./imgs/avatar-05.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h4>Teacher Name</h4>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 14rem;">
+                    <img src="./imgs/avatar-05.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h4>Teacher Name</h4>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 14rem;">
+                    <img src="./imgs/avatar-05.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h4>Teacher Name</h4>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 14rem;">
+                    <img src="./imgs/avatar-05.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h4>Teacher Name</h4>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+        </div>
+        <button  onclick="showHideElements('.section4')" class="button">More</button>
+    </div>
+    <!--end our teachers -->
 
     <!-- start Testimonials -->
     <div class="testimonials" id="testimonials">
@@ -320,121 +440,6 @@
     </div>
     <!-- end Testimonials -->
 
-    <!--start quote-->
-    <div class="quote" id="quote">
-        <div class="container">
-            <q>"The elevator to success is out of order. You'll have to use the stairs, one step at a time".</q>
-            <span>john doe</span>
-        </div>
-    </div>
-    <!--end quote-->
-
-    <!--start our teachers -->
-    <div class="teachers" id="teachers">
-        <div class="main-heading">
-            <h2 >OUR TEACHERS</h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus, est? </p>
-        </div>
-        <div class="container">
-                <div class="card" style="width: 14rem;">
-                    <img src="./imgs/avatar-05.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h4>Teacher Name</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div>
-                <div class="card" style="width: 14rem;">
-                    <img src="./imgs/avatar-05.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h4>Teacher Name</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div>
-                <div class="card" style="width: 14rem;">
-                    <img src="./imgs/avatar-05.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h4>Teacher Name</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div>
-                <div class="card" style="width: 14rem;">
-                    <img src="./imgs/avatar-05.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h4>Teacher Name</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div>
-        </div>
-        <button  onclick="showHideElements('.section4')" class="button">More</button>
-    </div>
-    <!--end our teachers -->
-
-    <!-- start achievements -->
-    <div class="achievements" id="achievements">
-        <div class="main-heading">
-            <h2 >Achievements</h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus, est? </p>
-        </div>
-        <div class="container">
-            <div class="box">
-                <div class="image">
-                    <img src="./imgs/gallery-01.png">
-                </div>
-                <div class="text-con">
-                    <h3>title 1</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, deleniti dignissimos laudantium cumque nihil quia ipsum dolore fugiat! Doloribus, quam? Obcaecati voluptatum accusantium voluptate</p>
-                </div>
-            </div>
-            <div class="box">
-                <div class="image">
-                    <img src="./imgs/gallery-01.png">
-                </div>
-                <div class="text-con">
-                    <h3>title 1</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, deleniti dignissimos laudantium cumque nihil quia ipsum dolore fugiat! Doloribus, quam? Obcaecati voluptatum accusantium voluptate</p>
-                </div>
-            </div>
-            <div class="box">
-                <div class="image">
-                    <img src="./imgs/gallery-01.png">
-                </div>
-                <div class="text-con">
-                    <h3>title 1</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, deleniti dignissimos laudantium cumque nihil quia ipsum dolore fugiat! Doloribus, quam? Obcaecati voluptatum accusantium voluptate</p>
-                </div>
-            </div>
-            <div class="box">
-                <div class="image">
-                    <img src="./imgs/gallery-01.png">
-                </div>
-                <div class="text-con">
-                    <h3>title 1</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, deleniti dignissimos laudantium cumque nihil quia ipsum dolore fugiat! Doloribus, quam? Obcaecati voluptatum accusantium voluptate</p>
-                </div>
-            </div>
-            <div class="box">
-                <div class="image">
-                    <img src="./imgs/gallery-01.png">
-                </div>
-                <div class="text-con">
-                    <h3>title 1</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, deleniti dignissimos laudantium cumque nihil quia ipsum dolore fugiat! Doloribus, quam? Obcaecati voluptatum accusantium voluptate</p>
-                </div>
-            </div>
-            <div class="box">
-                <div class="image">
-                    <img src="./imgs/gallery-01.png">
-                </div>
-                <div class="text-con">
-                    <h3>title 1</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, deleniti dignissimos laudantium cumque nihil quia ipsum dolore fugiat! Doloribus, quam? Obcaecati voluptatum accusantium voluptate</p>
-                </div>
-            </div>
-        </div>
-        <button  onclick="showHideElements('.section5')" class="button">More</button>
-    </div>
-    <!-- end achevments -->
-
     <!-- start contact -->
     <div class="contact" id="contact">
         <div class="container">
@@ -503,6 +508,5 @@
     </div>
     <!-- end footer -->
 
-    
 </body>
     </html>
