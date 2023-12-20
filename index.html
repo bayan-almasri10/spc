@@ -31,9 +31,7 @@
                     <li><a href="#about">ABOUT</a></li>
                     <li><a href="#services">SERVICES</a></li>
                     <li><a href="#corses">COURSES</a></li>
-                    <li><a href="#testimonials">TESTIMONIALS</a></li>
                     <li><a href="#achievements">ACHIEVEMENTS</a></li>
-                    <li><a href="#teachers">OUR TEACHERS</a></li>
                     <li><a href="#contact">CONTACT</a></li>
                 </ul>
             </nav>
@@ -43,8 +41,8 @@
 
     <!--start landing-->
     <div class="landing" id="landing">
-                    <img class="image" src="./imgs/b1.jpg" style="width:100%">
-                <div class="text">
+                    <img class="image" src="./imgs/b3.jpg" style="width:100%">
+                <div class="text container">
                     <div class="content">
                         <h1>Hello world<br> We Are Smart Pro Center</h1>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio reiciendis debitis quia magnam dolore nisi ratione possimus ullam asperiores impedit, placeat illo velit praesentium deleniti, quas sapiente temporibus culpa nobis!</p>
@@ -101,7 +99,7 @@
             </div>
         </div>
         <!-- <input  type="checkbox" id="toggleCheckbox" style="display: none;"> -->
-        <div id="section2">
+        <div class="container" id="section2">
             <!-- id="elementToToggle1" -->
             <div class="box">
                 <img src="./imgs/Language.jfif" alt="">
@@ -126,7 +124,9 @@
             </div>
         </div>
         <!--  id="toggleButton" -->
-        <button onclick="toggleElement('section2')" class="button">More</button>
+        <label class="button">
+            <input type="checkbox" id="toggle-services-sec2">
+        </label>
     </div>
     <!-- end Services -->
 
@@ -183,7 +183,7 @@
             </div>
             
         </div>
-        <div id="section1">
+        <div class="container" id="section3">
             <div class="box">
                 <img src="./imgs/cat-01.jpg">
                 <div class="content">
@@ -229,7 +229,9 @@
                 </div>
             </div>
         </div>
-        <button  onclick="toggleElement('section1')" class="button">More</button>
+        <label class="button">
+            <input type="checkbox" id="toggle-services-sec3">
+        </label>    
     </div>
     <!-- end corses -->
 
@@ -258,7 +260,7 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, deleniti dignissimos laudantium cumque nihil quia ipsum dolore fugiat! Doloribus, quam? Obcaecati voluptatum accusantium voluptate</p>
                 </div>
             </div>
-            <div id="section3">
+            <div  class="container" id="section4">
                 <div class="box">
                     <div class="image">
                         <img src="./imgs/gallery-01.png">
@@ -297,7 +299,9 @@
                 </div>
             </div>
         </div>
-        <button  onclick="toggleElement('section3')" class="button">More</button>
+        <label class="button">
+            <input type="checkbox" id="toggle-services-sec4">
+        </label>  
     </div>
     <!-- end achevments -->
 
@@ -345,8 +349,40 @@
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     </div>
                 </div>
+            <div class="container" id="section5">
+                <div class="card" style="width: 14rem;">
+                    <img src="./imgs/avatar-05.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h4>Teacher Name</h4>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 14rem;">
+                    <img src="./imgs/avatar-05.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h4>Teacher Name</h4>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 14rem;">
+                    <img src="./imgs/avatar-05.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h4>Teacher Name</h4>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 14rem;">
+                    <img src="./imgs/avatar-05.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h4>Teacher Name</h4>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <button  onclick="showHideElements('.section4')" class="button">More</button>
+        <label class="button">
+            <input type="checkbox" id="toggle-services-sec5">
+        </label> 
     </div>
     <!--end our teachers -->
 
@@ -395,48 +431,52 @@
                     <i class="fa-regular fa-star"></i>
                 </div>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi recusandae dicta labore cupiditate?</p>
-            </div>
-            <div class="box">
-                <img src="./imgs/avatar-04.png" alt="">
-                <h3>Mohammad Farag</h3>
-                <span class="title">Full Stack Web Developer</span>
-                <div class="rate">
-                    <i class="filled fa-solid fa-star"></i>
-                    <i class="filled fa-solid fa-star"></i>
-                    <i class="filled fa-solid fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                </div>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi recusandae dicta labore cupiditate?</p>
-            </div>
-            <div class="box">
-                <img src="./imgs/avatar-05.png" alt="">
-                <h3>Mohammad Farag</h3>
-                <span class="title">Full Stack Web Developer</span>
-                <div class="rate">
-                    <i class="filled fa-solid fa-star"></i>
-                    <i class="filled fa-solid fa-star"></i>
-                    <i class="filled fa-solid fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                </div>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi recusandae dicta labore cupiditate?</p>
-            </div>
-            <div class="box">
-                <img src="./imgs/avatar-06.png" alt="">
-                <h3>Mohammad Farag</h3>
-                <span class="title">Full Stack Web Developer</span>
-                <div class="rate">
-                    <i class="filled fa-solid fa-star"></i>
-                    <i class="filled fa-solid fa-star"></i>
-                    <i class="filled fa-solid fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                </div>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi recusandae dicta labore cupiditate?</p>
-            </div>
         </div>
-        <button  onclick="showHideElements('.section3')" class="button">More</button>
+            <div  class="container" id="section6">
+                <div class="box">
+                    <img src="./imgs/avatar-04.png" alt="">
+                    <h3>Mohammad Farag</h3>
+                    <span class="title">Full Stack Web Developer</span>
+                    <div class="rate">
+                        <i class="filled fa-solid fa-star"></i>
+                        <i class="filled fa-solid fa-star"></i>
+                        <i class="filled fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi recusandae dicta labore cupiditate?</p>
+                </div>
+                <div class="box">
+                    <img src="./imgs/avatar-05.png" alt="">
+                    <h3>Mohammad Farag</h3>
+                    <span class="title">Full Stack Web Developer</span>
+                    <div class="rate">
+                        <i class="filled fa-solid fa-star"></i>
+                        <i class="filled fa-solid fa-star"></i>
+                        <i class="filled fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi recusandae dicta labore cupiditate?</p>
+                </div>
+                <div class="box">
+                    <img src="./imgs/avatar-06.png" alt="">
+                    <h3>Mohammad Farag</h3>
+                    <span class="title">Full Stack Web Developer</span>
+                    <div class="rate">
+                        <i class="filled fa-solid fa-star"></i>
+                        <i class="filled fa-solid fa-star"></i>
+                        <i class="filled fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi recusandae dicta labore cupiditate?</p>
+                </div>
+        </div>
+        </div>
+        <label class="button">
+            <input type="checkbox" id="toggle-services-sec6">
+        </label>
     </div>
     <!-- end Testimonials -->
 

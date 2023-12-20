@@ -109,6 +109,8 @@ header{
     position: absolute;
     left: 0%;
     z-index: 4;
+    position: sticky;
+    background-color: #ffffff;
 }
 header .container{
     display: flex;
@@ -125,6 +127,10 @@ header .container::after{
     left: 15px;
     background-color: var(--main-color);
 }
+#about:target ~ nav {
+    background-color: #f0f0f0;
+}
+
 header .container .logo img{
     width: 300px;
     height: 90px;
@@ -156,10 +162,12 @@ header nav .toggle-menu{
 }
 header nav ul{
     display: flex;
+    margin-bottom: 0;
 }
 @media (max-width:767px){
     header nav ul{
         display: none;
+        padding-left: 0;
     }
     header nav .toggle-menu:hover + ul{
         display: flex;
@@ -175,7 +183,8 @@ header nav ul{
         text-align: center;
     }
 }
-header nav ul li a{
+header nav ul li a,
+.other-links{
     padding: 40px 10px;
     display: block;
     color: var(--main-color);
@@ -217,7 +226,7 @@ header nav .form i{
     padding: 40px;
     width: 40%;
     color: #1780b8;
-    transform: translateY(-50%);
+    transform: translateY(-70%);
     display: flex;
     justify-content: flex-end;
 }
@@ -229,7 +238,6 @@ header nav .form i{
 
 @media (max-width:767px) {
     .landing  .text{
-        /* margin-top: 10rem; */
         width: 100%;
     }
     .landing  .text .content{
@@ -265,7 +273,7 @@ header nav .form i{
 .landing .go-down{
     position: absolute;
     color: var(--main-color);
-    bottom: 25PX;
+    bottom: 110px;
     left: 50%;
     transform: translateX(-50%);
     transition: var(--main-transition);
@@ -328,22 +336,23 @@ header nav .form i{
 .about .image::before{
     content: '';
     position: absolute;
-    background-color: #ce9f109a;
     width: 100px;
-    height: calc(100% + 40px);
-    top: -50px;
+    height: calc(100% + 20px);
+    top: -20px;
     left: -20px;
+    border-left: 80px #ce9f109a solid;
+    border-bottom: 80px #ce9f109a solid;
     z-index: -1;
 }
 .about .image::after{
     content: '';
     position: absolute;
     width: 100px;
-    height: 300px;
-    top: -50px;
-    right: -270px;
-    border-left: 80px var(--main-color) solid;
-    border-bottom: 80px var(--main-color) solid;
+    height:calc(100% + 20px);
+    top: -30px;
+    right: -200px;
+    border-right: 80px var(--main-color) solid;
+    border-top: 80px var(--main-color) solid;
     z-index: -1;
 }
 @media (max-width:767px){
@@ -351,7 +360,6 @@ header nav .form i{
         content: '';
         width: 80px;
         height: 320px;
-        /* height: calc(100% + 40px); */
         top: -20px;
         left: -8px;
     }
@@ -361,8 +369,7 @@ header nav .form i{
         width: 130px;
         height: 300px;
         top: -20px;
-        right: -160px;
-        border-left: 80px var(--main-color) solid;
+        right: -50px;
         border-bottom: none;
         z-index: -1;
     }
@@ -382,9 +389,6 @@ header nav .form i{
     gap: 30px;
     margin-bottom: 20px;
 }
-/* .services #section2{
-    visibility: hidden;
-} */
 .services .box{
     box-shadow: 0px 12px 20px 0px rgb(0 0 0 / 13%), 0px 2px 4px 0px rgb(0 0 0 / 12%);
     counter-increment: services;
@@ -441,6 +445,26 @@ header nav .form i{
     display: block;
     margin: auto 0;
 }
+
+.services #section2{
+    display: none;
+}
+
+.services #toggle-services-sec2 {
+    display: none;
+}
+
+.services label::before {
+    content: "More";
+}
+
+.services label:has(:checked)::before {
+    content: "Less";
+}
+
+.services:has(#toggle-services-sec2:checked) #section2 {
+    display: grid;
+}
 /* end services */
 
 /* start corses */
@@ -454,14 +478,12 @@ header nav .form i{
     grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
     gap: 30px;
 }
-/* .corses #section{
-    visibility: hidden;
-} */
 .corses .box{
     box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
     background-color: #ce9f100e;
     border-radius: 10px;
     overflow: hidden;
+    margin-bottom: 20px;
     transition: transform var(--main-transition), box-shadow var(--main-transition);
 }
 .corses .box:hover{
@@ -505,11 +527,28 @@ header nav .form i{
 }
 .corses .box .info i{
     color: var(--second-color);
-    /* color: var(--main-color); */
-
 }
 .corses .box:hover .info i{
     animation: moving-arrow 0.6s linear infinite;
+}
+.corses #section3{
+    display: none;
+}
+
+.corses #toggle-services-sec3 {
+    display: none;
+}
+
+.corses label::before {
+    content: "More";
+}
+
+.corses label:has(:checked)::before {
+    content: "Less";
+}
+
+.corses:has(#toggle-services-sec3:checked) #section3 {
+    display: grid;
 }
 /* end corses */
 
@@ -591,6 +630,31 @@ header nav .form i{
         font-size: 17px;
     }
 }
+.testimonials .container .container{
+    padding-left: 0px;
+    padding-right: 20px;
+    margin-left: 0;
+    margin-right: 0;
+}
+.testimonials #section6{
+    display: none;
+}
+
+.testimonials #toggle-services-sec6 {
+    display: none;
+}
+
+.testimonials label::before {
+    content: "More";
+}
+
+.testimonials label:has(:checked)::before {
+    content: "Less";
+}
+
+.testimonials:has(#toggle-services-sec6:checked) #section6 {
+    display: grid;
+}
 /* end Testimonials */
 
 /* start quote */
@@ -636,7 +700,6 @@ q::before{
 }
 .achievements .box {
     display: inline-flex;
-    /* grid-template-columns: repeat(auto-fill, minmax(350px,1fr)); */
     gap: 40px;
     padding: 15px;
     background-color: white;
@@ -654,7 +717,6 @@ q::before{
 }
 .achievements .box h3{
     color: var(--main-color);
-    /* font-size: 25px; */
 }
 .achievements .box .text-con p{
     margin: 30px;
@@ -692,6 +754,12 @@ q::before{
     max-width: 100%;
     transition: var(--main-transition);
 }
+.achievements .container .container{
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 0;
+    margin-right: 0;
+}
 .button{
     display: block;
     margin: 0 auto ;
@@ -708,11 +776,23 @@ q::before{
     transition: all 0.2s ease;
     border: none;
 }
-/* .hide{
-    display: none;
-} */
 .button:active{
     transform: scale(0.96);
+}
+.achievements #section4{
+    display: none;
+}
+.achievements #toggle-services-sec4 {
+    display: none;
+}
+.achievements label::before {
+    content: "More";
+}
+.achievements label:has(:checked)::before {
+    content: "Less";
+}
+.achievements:has(#toggle-services-sec4:checked) #section4 {
+    display: grid;
 }
  /* end achievements */
 
@@ -724,8 +804,38 @@ q::before{
 .teachers .container{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
-    gap: 40px;
+    gap: 30px;
     margin-bottom: 20px;
+}
+.teachers .container .container{
+    padding-left: 0px;
+    padding-right: 20px;
+    margin-left: 0;
+    margin-right: 0;
+}
+@media (max-width:767px) {
+    .teachers .container .cart{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+.teachers #section5{
+    display: none;
+}
+.teachers #toggle-services-sec5 {
+    display: none;
+}
+.teachers label::before {
+    content: "More";
+}
+
+.teachers label:has(:checked)::before {
+    content: "Less";
+}
+
+.teachers:has(#toggle-services-sec5:checked) #section5 {
+    display: grid;
 }
  /* end teachers */
 
@@ -774,9 +884,6 @@ q::before{
     cursor: pointer;
     margin-left:auto ;
 }
-/*.contact .content .info{
-    flex-basis: 25%; 
-}*/
 @media (max-width:767px) {
     .contact .content .info{
         text-align: center;
@@ -836,10 +943,12 @@ q::before{
 }
 .footer .box .social{
     display: flex;
+    
 }
 @media (max-width:767px){
     .footer .box .social{
         justify-content: center ;
+        
     }
 }
 .footer .box .social li{
@@ -875,6 +984,10 @@ q::before{
 @media (max-width:767px){
     .footer .box .links li{
         text-align: center;
+        
+    }
+    .footer .box .links{
+        padding-left: 0;
     }
 }
 .footer .box .links li:not(:last-child){
@@ -887,7 +1000,6 @@ q::before{
     color:#B9B9B9 ;
     transition: var(--main-transition);
 }
-/* */
 .footer .box .links li:hover a{
     color:white ; 
 }
@@ -918,13 +1030,11 @@ q::before{
 .footer .box .line span{
     display: block;
 }
-@media (max-width:767px) {
-    
-}
 .footer .copyright{
     color: white;
     display: flex;
     align-items: center;
+    margin-bottom: 0;
     justify-content: center;
     padding: 10px 0;
     border-top: 1px solid  #444;
