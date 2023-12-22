@@ -306,6 +306,7 @@ header nav .form i{
         gap: 30px;
         text-align: center;
     }
+
 }
 
 .about .container .logo{
@@ -356,22 +357,10 @@ header nav .form i{
     z-index: -1;
 }
 @media (max-width:767px){
-    .about .image::before{
-        content: '';
-        width: 80px;
-        height: 320px;
-        top: -20px;
-        left: -8px;
-    }
+    .about .image ,
+    .about .image::before,
     .about .image::after{
-        content: '';
-        position: absolute;
-        width: 130px;
-        height: 300px;
-        top: -20px;
-        right: -50px;
-        border-bottom: none;
-        z-index: -1;
+        display: none;
     }
 }
 /*end about*/
@@ -813,13 +802,23 @@ q::before{
     margin-left: 0;
     margin-right: 0;
 }
+
 @media (max-width:767px) {
-    .teachers .container .cart{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+    .teachers .container .card{
+        margin-left: 55px;
     }
 }
+@media (max-width:376px) {
+    .teachers .container .card{
+        margin-left: 35px;
+    }
+}
+@media (max-width:321px) {
+    .teachers .container .card{
+        margin-left: 10px;
+    }
+}
+
 .teachers #section5{
     display: none;
 }

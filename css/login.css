@@ -1,0 +1,21 @@
+h1{
+    text-align: center;
+}
+.container{
+    /* margin:0 10% 0 10% ; */
+    margin-top: 18%;
+    display: block;
+}
+.container .box{
+    text-align: center;
+}
+.container .form-control{
+    width: max-content;
+    display: block;
+    margin: 0 auto;
+}
+.form-check-input,
+.form-check-label{
+    display: block;
+    margin: 0 auto;
+}
